@@ -1,0 +1,12 @@
+package com.dbs.exception;
+
+import java.util.Date;
+
+public class ErrorResponse {
+	Date date;
+	int code;
+	String status;
+	String message;
+	
+
+}

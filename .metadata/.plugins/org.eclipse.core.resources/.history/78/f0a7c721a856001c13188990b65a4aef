@@ -1,0 +1,11 @@
+package com.dbs.app;
+import com.dbs.beans.Point;
+
+public class App_01 {
+	public static void main(String[] args) {
+		Point pa=new Point(5,3);
+		System.out.println(pa);
+		
+	}
+
+}

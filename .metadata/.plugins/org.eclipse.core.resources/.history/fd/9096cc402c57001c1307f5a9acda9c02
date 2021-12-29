@@ -1,0 +1,58 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+         <bean id="CustomerBean" class="com.dbs.bean.Customer">
+
+		<!-- java.util.List -->
+		<property name="lists">
+			<list>
+				<value>1</value>
+				<ref bean="PersonBean" />
+				<bean class="com.dbs.bean.Person">
+					<property name="name" value="dbsList" />
+					<property name="address" value="address" />
+					<property name="age" value="28" />
+				</bean>
+			</list>
+		</property>
+
+		<!-- java.util.Set -->
+		<property name="sets">
+			<set>
+				<value>1</value>
+				<ref bean="PersonBean" />
+				<bean class="com.dbs.bean.Person">
+					<property name="name" value="dbsSet" />
+					<property name="address" value="address" />
+					<property name="age" value="28" />
+				</bean>
+			</set>
+		</property>
+
+		<!-- java.util.Map -->
+		<property name="maps">
+			<map>
+				<entry key="Key 1" value="1" />
+				<entry key="Key 2" value-ref="PersonBean" />
+				<entry key="Key 3">
+					<bean class="com.dbs.bean.Person">
+						<property name="name" value="dbsMap" />
+						<property name="address" value="address" />
+						<property name="age" value="28" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+
+	</bean>
+
+	<bean id="PersonBean" class="com.dbs.bean.Person">
+		<property name="name" value="dbs1" />
+		<property name="address" value="address 1" />
+		<property name="age" value="28" />
+	</bean>
+
+</beans>

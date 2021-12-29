@@ -1,0 +1,40 @@
+package com.dbs.service;
+import java.util.Optional;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.dbs.beans.Employee;
+import com.dbs.exception.InvalidEmployeeIdException;
+import com.dbs.repo.EmployeeRepo;
+
+ 
+
+public class EmployeeService {
+
+	EmployeeRepo employeeRepo;
+	public EmployeeRepo getEmployeeRepo() {
+		return employeeRepo;
+		
+	}
+	@Autowired
+	public void setEmployeeRepo(EmployeeRepo employeeRepo) {
+		this.employeeRepo=employeeRepo;
+	}
+	public Employee find(int id) {
+		Optional<Employee> empOpt=employeeRepo.findById(id);
+		if(!empOpt.isPresent()) {
+			throw new InvalidEmployeeIdException("Employee ID not found:"+id);
+		}
+		return empOpt.get();
+		
+	}
+	public List<Employee> findAll(){
+		return (List<Employee>employeeRepo.findAll());
+	}
+	public Employee save(Employee employee) {
+		return employeeRepo.save(employee);
+	}
+	public Employee edit(Employee employee) {
+		employeeRepo.save(employee);
+	}
+}

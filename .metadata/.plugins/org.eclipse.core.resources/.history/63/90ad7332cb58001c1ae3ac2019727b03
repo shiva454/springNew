@@ -1,0 +1,11 @@
+package com.dbs.config;
+
+
+@Configuration
+@ComponentScan("com.dbs")
+
+
+
+public class AppConfig {
+
+}

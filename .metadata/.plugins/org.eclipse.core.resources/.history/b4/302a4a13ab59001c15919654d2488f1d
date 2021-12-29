@@ -1,0 +1,9 @@
+package com.dbs;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.dbs.entity.Employee;
+
+public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
+
+}

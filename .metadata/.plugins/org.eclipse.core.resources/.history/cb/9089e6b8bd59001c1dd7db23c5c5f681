@@ -1,0 +1,22 @@
+package com.dbs.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dbs.repo.DepartmentRepo;
+
+@Service
+public class DepartmentService {
+	DepartmentRepo departmentRepo;
+
+	public DepartmentRepo getDepartmentRepo() {
+		return departmentRepo;
+	}
+
+	@Autowired
+	public void setDepartmentRepo(DepartmentRepo departmentRepo) {
+		this.departmentRepo = departmentRepo;
+	}
+	
+ 
+}

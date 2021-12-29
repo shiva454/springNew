@@ -1,0 +1,14 @@
+package com.dbs.beans;
+
+public class PrimeChecker {
+public boolean check(int num) {
+	for(int c=2;c<num;c++)
+	{
+		if(num%c==0) {
+			return false;
+		}
+	}
+	return true;
+	
+}
+}

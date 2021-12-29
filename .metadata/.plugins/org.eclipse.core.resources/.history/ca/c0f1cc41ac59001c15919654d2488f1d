@@ -1,0 +1,11 @@
+package com.dbs.entity;
+
+import java.util.List;
+
+public class Department {
+
+	 int id;
+	 String name;
+	 List<Employee> employees;
+
+}

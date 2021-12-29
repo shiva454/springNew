@@ -1,0 +1,12 @@
+#Define the root logger with different appenders
+log4j.rootLogger=DUBUG,FILE ,stdout
+
+#Define each of the appender
+#Define FILE appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.File=log.out
+#Define the layout for FILE appender
+log4j.appender.file.layout=
+
+#Define CONSOLE appender
+#Define the layout for CONSOLE appender

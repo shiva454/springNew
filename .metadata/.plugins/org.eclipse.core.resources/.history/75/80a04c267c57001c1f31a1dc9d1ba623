@@ -1,0 +1,9 @@
+#Define the root logger with differnt appenders
+log4j.rootLogger=DUBUG,xyz,stdout
+#Define each of the appender
+#Define FILE appender
+log4j.appender.xyz=
+#Define the layout for FILE appender
+
+#Define CONSOLE appender
+#Define the layout for CONSOLE appender

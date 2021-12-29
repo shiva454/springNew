@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.dbs.beans&apos; to &apos;SpringDemo_02/src&apos;&#x0D;&#x0A;- Original project: &apos;Demo_02&apos;&#x0D;&#x0A;- Destination element: &apos;SpringDemo_02/src&apos;&#x0D;&#x0A;- Original element: &apos;Demo_02/src/com.dbs.beans&apos;" description="Copy package" destination="=SpringDemo_02/src" element1="/src&lt;com.dbs.beans" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1638850840798" version="1.0"/>
+</session>

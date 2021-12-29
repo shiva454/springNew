@@ -1,0 +1,23 @@
+package com.dbs.exception;
+
+import java.util.Date;
+
+import org.springframework.http.HttpStatus;
+
+public class ErrorResponse {
+	Date date;
+	int code;
+	String status;
+	String message;
+	public ErrorResponse() {
+		super();
+		date=new Date();
+		// TODO Auto-generated constructor stub
+	}
+	public ErrorResponse(HttpStatus status,String message) {
+		super();
+		this.message = message;
+	}
+	
+
+}

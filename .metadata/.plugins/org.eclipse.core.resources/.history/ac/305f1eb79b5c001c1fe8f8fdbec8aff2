@@ -1,0 +1,12 @@
+package com.dbs.controller;
+
+
+
+@RequestController
+@RequestMapping("/")
+public class HomeController {
+	public String sayHello() {
+		return "Hello";
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.dbs.entity;
+
+public class Department {
+
+	public Department() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

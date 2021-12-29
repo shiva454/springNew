@@ -1,0 +1,7 @@
+package com.dbs.beans;
+
+public class Triangle {
+	Point pointA;
+	Point
+
+}

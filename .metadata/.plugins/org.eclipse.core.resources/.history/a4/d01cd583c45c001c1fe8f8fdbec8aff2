@@ -1,0 +1,20 @@
+package com.dbs.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class CustomExceptionHandler {
+	@ExceptionHandler(value=InvalidEmployeeException.class)
+	public ResponseEntity<String>methl(InvalidEmployeeException invalidEmployeeException){
+		String errorMessage=invalidEmployeeException.getMessage();
+		return new ResponseEntity<>(errorMessage,HttpStatus.NOT_FOUND);
+	}
+	 
+	public ResponseEntity<String>meth2(InvalidDepartmentException invalidDepartmentException){
+		String errorMessage=invalidDepartmentException.getMessage();
+		return new ResponseEntity<>(errorMessage,HttpStatus.NOT_FOUND);
+	}
+}

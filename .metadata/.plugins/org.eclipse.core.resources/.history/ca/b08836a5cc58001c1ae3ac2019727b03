@@ -1,0 +1,16 @@
+package com.dbs;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.dbs.config.AppConfig;
+import com.dbs.service.PersonService;
+
+public class App_01 {
+	public static void main(String args[]) {
+		ApplicationContext ctxt=new AnnotationConfigApplicationContext(AppConfig.class);
+		PersonService personService=ctxt.getBean(PersonService.class);
+		
+	}
+
+}

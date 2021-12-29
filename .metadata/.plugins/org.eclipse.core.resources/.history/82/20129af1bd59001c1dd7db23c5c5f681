@@ -1,0 +1,35 @@
+package com.dbs.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dbs.entity.Department;
+import com.dbs.entity.Employee;
+import com.dbs.exception.InvalidEmployeeException;
+import com.dbs.repo.DepartmentRepo;
+
+@Service
+public class DepartmentService {
+	DepartmentRepo departmentRepo;
+
+	public DepartmentRepo getDepartmentRepo() {
+		return departmentRepo;
+	}
+
+	@Autowired
+	public void setDepartmentRepo(DepartmentRepo departmentRepo) {
+		this.departmentRepo = departmentRepo;
+	}
+	
+	public Employee find(int id) throws InvalidDepartmentException {
+		Optional<Department> optionalDept = departmentRepo.findById(id);
+		if (!optionalDept.isEmpty()){
+			 throw new InvalidDepartmentException("Employeeid not found:"+id);
+			  }
+		return optionalDept.get();
+	}
+
+ 
+}

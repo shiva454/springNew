@@ -1,0 +1,11 @@
+package com.dbs.entity;
+
+public class Employee {
+
+	 
+	int id;
+	String name;
+	Department department;
+	 
+
+}

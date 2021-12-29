@@ -1,0 +1,12 @@
+package com.dbs.exception;
+
+public class InvalidEmployeeIdException   {
+
+	public InvalidEmployeeIdException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	 
+
+}

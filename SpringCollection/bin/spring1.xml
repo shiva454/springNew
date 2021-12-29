@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+
+<!-- <bean id="pointA" class="com.dbs.beans.Point">-->
+<!-- <property name="x" value="10" />-->
+<!-- <property name="y" value="16" />-->
+<!-- </bean>-->
+
+
+
+
+
+
+<!-- <bean id="pointB" class="com.dbs.beans.Point">-->
+<!-- <property name="x" value="0" />-->
+<!-- <property name="y" value="16" />-->
+<!-- </bean>-->
+<!-- <bean id="pointC" class="com.dbs.beans.Point">-->
+<!-- <property name="x" value="5" />-->
+<!-- <property name="y" value="0" />-->
+<!-- </bean>-->
+
+
+
+
+
+<!-- &lt;!&ndash; Setter Injection&ndash;&gt;-->
+<!-- <bean id="triangle" class="com.dbs.beans.Triangle" autowire="byName">-->
+<!-- <property name="a" ref="pointA" />-->
+<!-- <property name="b" ref="pointB" />-->
+<!-- <property name="c" ref="pointC" />-->
+
+
+
+
+
+<!-- </bean>-->
+
+
+
+
+
+
+
+
+<!-- Constructor Injection-->
+<!-- <bean id="triangle" class="com.dbs.beans.Triangle">-->
+<!-- <constructor-arg name="a" ref="pointA" />-->
+<!-- <constructor-arg name="b" ref="pointB" />-->
+<!-- <constructor-arg name="c" ref="pointC" />-->
+<!-- </bean>-->
+<!-- more bean definitions go here -->
+<!--</beans>-->
+<bean id="ListBean" class = "com.dbs.beans.Collections">
+<property name="list">
+<list>
+<value>Value 1</value>
+<value>Value 2</value>
+<value>Value 3</value>
+</list>
+</property>
+<property name="set">
+<set>
+<value>Value 1</value>
+<value>Value 2</value>
+<value>Value 3</value>
+</set>
+</property>
+<property name="map">
+<map>
+<entry key = "101" value="value1"/>
+<entry key = "102" value="value2"/>
+<entry key = "103" value="value3"/>
+
+
+
+</map>
+</property>
+</bean>
+</beans>

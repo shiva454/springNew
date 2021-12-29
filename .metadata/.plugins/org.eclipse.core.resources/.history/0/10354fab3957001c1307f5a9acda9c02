@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+         <bean id="listBean" class="com.dbs.bean.ListBean">
+         <property name="listProperties">
+         <list>
+         <value>1</value>
+         <value>4</value>
+         <value>8</value>
+         </list>
+         
+         </property>
+         </bean>
+          <bean id="setBean" class="com.dbs.bean.SetBean">
+             <property name="setProperties">
+             <set>
+             <value>6</value>
+             <value>5</value>
+             <value>2</value>
+             </set>
+             </property>
+             </bean>
+       </beans>

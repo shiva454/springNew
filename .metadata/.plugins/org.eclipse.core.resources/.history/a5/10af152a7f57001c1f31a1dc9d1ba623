@@ -1,0 +1,24 @@
+#Define the root logger with different appenders
+log4j.rootLogger=DUBUG,FILE ,stdout
+
+#Define each of the appender
+#Define FILE appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+log4j.appender.FILE.File=log.out
+
+#Define the layout for FILE appender
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.conversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+log4j.appender.file.layout.Threshold=DEBUG
+
+
+#Define CONSOLE appender
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Targer=System.out
+
+
+#Define the layout for CONSOLE appender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.conversionPattern= %m%n
+log4j.appender.stdout.Threshold=INFO
+ 

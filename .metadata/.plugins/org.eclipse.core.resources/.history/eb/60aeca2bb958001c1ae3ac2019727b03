@@ -1,0 +1,19 @@
+package com.dbs.beans;
+
+public class Employee {
+	int id;
+	String name;
+	int deptno;
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(int id, String name, int deptno) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.deptno = deptno;
+	}
+	
+
+}

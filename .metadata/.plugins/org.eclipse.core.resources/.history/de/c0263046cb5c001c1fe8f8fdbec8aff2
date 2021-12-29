@@ -1,0 +1,11 @@
+package com.dbs.entity;
+
+import java.util.List;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.query.Param;
+
+@RepositoryRestResource(collectionResourceRel = "employee", path = "employee")
+public interface PersonRepository extends PagingAndSortingRepository<Employee, Long>
+{
+  List<Employee> findByLastName(@Param("name") String name);
+}
